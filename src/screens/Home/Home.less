@@ -1,0 +1,105 @@
+.home {
+  background: #414141;
+  background-image: url('../../static/img/manBg.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+  .nav {
+    width: 100%;
+    height: 50px;
+    background: #FFBF00;
+    border-bottom: 5px solid darken(#FFBF00, 10%); 
+    margin-bottom: 50px;
+    i {
+      color: #fff;
+      position: absolute;
+      left: 30px;
+      top: 15px;
+    }
+    input {
+      float: left;
+      margin-left: 15px;
+      height: 40px;
+      margin-top: 5px;
+      border: none;
+      background: darken(#FFBF00, 10%);
+      width: 300px;
+      padding-left: 50px;
+      outline: none;
+      color: #fff;
+      font-size: 18px;
+      font-family: 'arial', arial;
+      font-weight: normal; 
+      &::placeholder {
+        color: #eee;
+        font-size: 18px;
+        font-family: 'Barlow Semi Condensed', arial;
+        font-weight: normal;        
+      }
+    }
+    .logoNav {
+      width: 100px;
+      height: 50px;
+      background: url('../../static/img/logoWhite.png')no-repeat;
+      background-size: contain;
+      margin-right: 15px;
+      float: right;
+    }
+  }
+  .filter {
+    width: 300px;
+    margin: 0 auto 50px auto;
+    display: flex;
+    justify-content: space-between;
+    .item {
+      width: 80px; 
+      height: 80px;
+      border: 2px solid #fff;
+      border-radius: 100%;
+      cursor: pointer;
+      &.active {
+        border-color: #FFBF00;
+        background-color: #FFBF00 !important; 
+      }
+      &.muscle {
+        background: url('../../static/img/muscleIcon.png')no-repeat;
+        background-position: center;
+        background-size: 50%;
+      }
+      &.fit {
+        background: url('../../static/img/fitIcon.png')no-repeat;
+        background-position: center;
+        background-size: 70%;
+      }
+      &.nutri {
+        background: url('../../static/img/nutriIcon.png')no-repeat;
+        background-position: center;
+        background-size: 55%;
+      }
+    }
+  }
+  
+  .videosContainer {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .home {
+    .nav {
+      input {
+        width: 240px;
+      }
+      .logoNav {
+        display: none;
+      }
+    }
+    .videosContainer {
+      justify-content: center;
+    }
+  }
+}
